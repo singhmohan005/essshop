@@ -5,12 +5,14 @@ import Home from './Pages/Home';
 import About from './Pages/About';
 import { Provider } from 'react-redux';
 import store from './store/store';
+import Nav from './components/Nav';
 
 function App() {
   return (
     // <div className='text-3xl'>hello</div>
     <Provider store={store} >
     <BrowserRouter>
+    <Nav />
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/about" element={<About />} />

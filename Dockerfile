@@ -27,8 +27,8 @@ RUN rm -rf ./*
 # Copy build files from the builder stage
 COPY --from=builder /app/build .
 
-# Expose port 80
-EXPOSE 80
+# Expose port 8080
+EXPOSE 8080
 
 # Start nginx
 CMD ["nginx", "-g", "daemon off;"]

@@ -5,6 +5,7 @@ import ProductCard from "../../components/ProductCard";
 import Logosvg from "../../logo.svg";
 import getAllProducts from '../../services/productService'
 import PrimarySearchAppBar from './AppBar';
+import { useTranslation } from "react-i18next";
 
 const PREFIX = "Home";
 
@@ -29,6 +30,7 @@ const ProductContainer = styled(Box)(({ theme }) => ({
 }));
 
 const Home = () => {
+    const { t } = useTranslation();
     const [products,setProducts] = useState([])
     const sampleProduct = [
         {
@@ -124,6 +126,7 @@ const Home = () => {
     },[])
 
     return (
+     <>
       <h1>{t("welcome")}</h1>
         <StyledContainer className={classes.root} maxWidth={false}>
             {/* <PrimarySearchAppBar/> */}
@@ -133,6 +136,7 @@ const Home = () => {
                 ))}
             </ProductContainer>   
         </StyledContainer>
+     </>
     );
 };
 

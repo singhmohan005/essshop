@@ -124,6 +124,7 @@ const Home = () => {
     },[])
 
     return (
+      <h1>{t("welcome")}</h1>
         <StyledContainer className={classes.root} maxWidth={false}>
             {/* <PrimarySearchAppBar/> */}
             <ProductContainer>
